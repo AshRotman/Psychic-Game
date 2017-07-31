@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width">
+	<title>Psychic Game</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="javascript/game.js">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- Game design with a header and a box on the side keeping track of wins losses guesses left and letters guessed -->
+
+
+<div class="page-header">
+  <h1>The Psychic Game <small>Guess a letter if you think you can win</small></h1>
+</div>
+	<h2>Guess what letter I am thinking of</h2>
+<!--Empty Div for the tallies-->
+        <div id="game" class="col-xs-10 col-sm-8 col-med-6 col-lg-4">
+          <ul class="list-group">
+            <li class="list-group-item"><p id="wins">Wins: </p></li>
+            <li class="list-group-item"><p id="losses">Losses: </p></li>
+            <li class="list-group-item"><p id="guessLeft">Guesses Left: </p></li>
+            <li class="list-group-item"><p id="let">Your Guesses so far: </p></li>
+          </ul>  
+        </div>
+
+
+
+</body>
+</html>
