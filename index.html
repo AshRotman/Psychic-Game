@@ -6,30 +6,80 @@
 	<title>Psychic Game</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link rel="stylesheet" type="text/css" href="javascript/game.js">
+	<!-- <link rel="stylesheet" type="text/css" href="assets/javascript/game.js"> -->
 	<!-- Latest compiled and minified CSS -->
+ 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
 
 <!-- Game design with a header and a box on the side keeping track of wins losses guesses left and letters guessed -->
 
-
+<!-- header from Bootstrap -->
 <div class="page-header">
   <h1>The Psychic Game <small>Guess a letter if you think you can win</small></h1>
 </div>
 	<h2>Guess what letter I am thinking of</h2>
-<!--Empty Div for the tallies-->
+<!--Div for the tallies-->
         <div id="game" class="col-xs-10 col-sm-8 col-med-6 col-lg-4">
           <ul class="list-group">
             <li class="list-group-item"><p id="wins">Wins: </p></li>
             <li class="list-group-item"><p id="losses">Losses: </p></li>
             <li class="list-group-item"><p id="guessLeft">Guesses Left: </p></li>
-            <li class="list-group-item"><p id="let">Your Guesses so far: </p></li>
+            <li class="list-group-item"><p id="lettters">Your Guesses so far: </p></li>
           </ul>  
         </div>
 
+         <script type="text/javascript">
 
+
+var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k', 'l', 
+'m', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var answer = "";
+var guessesLeft  = 6;
+
+
+// generates random letter
+function setRandomletter() {
+  answer = alphabet[Math.floor(Math.random() * alphabet.length)];
+}
+
+// chances left counter
+function setAnswerResult(is_correct) {
+  guessesLeft--;
+  $('#guessesLeft').text(chances);
+
+
+//get the letter user types
+function getUserInput(event) {
+  var key = event.keyCode;
+    
+//   var letter = String.fromCharCode(key).toLowerCase();
+//   var check = answer.toLowerCase();
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         </script>
+
+
+ <script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 
 </body>
 </html>
